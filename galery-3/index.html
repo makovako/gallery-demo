@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="slidershow middle">
+      <div class="slides">
+        <input type="radio" name="r" id="r1" checked />
+        <input type="radio" name="r" id="r2" />
+        <input type="radio" name="r" id="r3" />
+        <div class="slide s1">
+          <img
+            src="../images/man-inside-a-car-with-reflection-on-rear-view-mirror-3476402.jpg"
+            alt=""
+          />
+        </div>
+        <div class="slide s2">
+          <img
+            src="../images/people-in-front-of-brown-concrete-building-while-feeding-3429761.jpg"
+            alt=""
+          />
+        </div>
+        <div class="slide s3">
+          <img
+            src="../images/woman-standing-on-staircase-with-a-bouquet-3484678.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="navigation">
+        <label for="r1" class="bar"></label>
+        <label for="r2" class="bar"></label>
+        <label for="r3" class="bar"></label>
+      </div>
+    </div>
+    <script>
+      const buttons = [
+        document.getElementById("r1"),
+        document.getElementById("r2"),
+        document.getElementById("r3")
+      ];
+
+      document.addEventListener("keydown", e => {
+        let checkedButton = buttons.filter(b => b.checked)[0];
+
+        // 37 left
+        if (e.keyCode === 37) {
+          let checked = buttons.indexOf(checkedButton);
+          e.preventDefault();
+          if (checked > 0) {
+            checked--;
+            buttons[checked].checked = true;
+          }
+          //39 right
+        } else if (e.keyCode === 39) {
+          let checked = buttons.indexOf(checkedButton);
+
+          e.preventDefault();
+          if (checked < 2) {
+            checked++;
+            buttons[checked].checked = true;
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

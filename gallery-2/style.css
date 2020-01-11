@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #313131;
+}
+
+.slider {
+    width: 800px;
+    height: 400px;
+    background: url('../images/man-inside-a-car-with-reflection-on-rear-view-mirror-3476402.jpg');
+    margin: 100px auto;
+    background-size: cover;
+    animation: slide 20s infinite;
+}
+
+@keyframes slide {
+    30% {
+        background: url('../images/people-in-front-of-brown-concrete-building-while-feeding-3429761.jpg');
+        background-size: cover;
+    }
+    60% {
+        background: url('../images/woman-standing-on-staircase-with-a-bouquet-3484678.jpg');
+        background-size: cover;
+    }
+    90% {
+        background: url('../images/man-inside-a-car-with-reflection-on-rear-view-mirror-3476402.jpg');
+        background-size: cover;
+    }
+}

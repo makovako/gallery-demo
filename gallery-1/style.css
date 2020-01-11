@@ -1,0 +1,70 @@
+body, #slider, .wrap, .slide-content{
+    margin:0;
+    padding: 0;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+
+}
+
+.wrap {
+    position: relative;
+}
+
+.slide {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.slide1 {
+    background-image: url('../images/man-inside-a-car-with-reflection-on-rear-view-mirror-3476402.jpg');
+}
+
+.slide2 {
+    background-image: url('../images/people-in-front-of-brown-concrete-building-while-feeding-3429761.jpg');
+}
+
+.slide3{
+    background-image: url('../images/woman-standing-on-staircase-with-a-bouquet-3484678.jpg');
+}
+
+.slide-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.slide-content span {
+    color: #fff;
+    font-size: 5rem;
+
+}
+
+.arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    margin-top: -30px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+#arrow-left {
+    border-width: 30px 40px 30px 0;
+    left: 0;
+    margin-left: 30px;
+    border-color: transparent #fff transparent transparent;
+}
+
+#arrow-right {
+    border-width: 30px 0px 30px 40px;
+    right: 0;
+    margin-right: 30px;
+    border-color: transparent  transparent transparent #fff;
+}
